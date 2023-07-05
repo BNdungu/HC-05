@@ -18,12 +18,12 @@ To get started, follow these steps:
 
 Connect the HC-05 module to the Arduino board as follows:
 
-- HC-05 VCC -> Arduino 5V
-- HC-05 GND -> Arduino GND
-- HC-05 RXD -> Arduino TX (Pin 16)
-- HC-05 TXD -> Arduino RX (Pin 17)
+- HC-05 VCC -> Microcontroller 3v3 or 5V
+- HC-05 GND -> Microcontroller GND pin
+- HC-05 RXD -> Microcontroller TX in my case (Pin 16)
+- HC-05 TXD -> Microcontroller RX in my case (Pin 17)
 
-Make sure to cross-connect the RX and TX pins between the Arduino board and the HC-05 module.
+Make sure to cross-connect the RX and TX pins between the Microcontroller board and the HC-05 module.
 
 ### Uploading the Code
 
@@ -34,7 +34,7 @@ Make sure to cross-connect the RX and TX pins between the Arduino board and the 
 
 ### Using AT Commands
 
-1. Power on the Arduino board and HC-05 module.
+1. Power on the Microcontroller board and HC-05 module.
 2. Open the Serial Monitor in the Arduino IDE.
 3. Set the baud rate of the Serial Monitor to 115200.
 4. Enter AT commands in the Serial Monitor to communicate with the HC-05 module.
