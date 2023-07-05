@@ -40,8 +40,6 @@ Make sure to cross-connect the RX and TX pins between the Microcontroller board 
 3. Set the baud rate of the Serial Monitor to 115200.
 4. Enter AT commands in the Serial Monitor to communicate with the HC-05 module.
 
-### Please note that the default baud rate for communication with the HC-05 module is set to 38400.
-
 The HC-05 expects commands to include a carriage return and newline characters (\r\n). You can add these automatically in the serial monitor by selecting “Both NL & CR” at the bottom of the window.
 
 ## AT Commands
@@ -63,6 +61,8 @@ Here are some common AT commands that can be used with the HC-05 module:
 ### Example Code
 
 The following code snippet demonstrates the basic setup for sending and receiving AT commands:
+
+### NB: the baud rate used for exchanging data between microcontroller board and HC-05 is set to 38400 by default
 
 ```cpp
 #include <SoftwareSerial.h>
