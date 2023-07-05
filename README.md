@@ -62,7 +62,7 @@ Here are some common AT commands that can be used with the HC-05 module:
 
 The following code snippet demonstrates the basic setup for sending and receiving AT commands:
 
-### NB: the baud rate used for exchanging data between microcontroller board and HC-05 is set to 38400 by default
+### NB: 38400 is the baud rate set by default on the HC-05 module for uart communications with microcontrollers.
 
 ```cpp
 #include <SoftwareSerial.h>
