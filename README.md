@@ -24,7 +24,7 @@ Connect the HC-05 module to the Microcontroller board as follows:
 - HC-05 TXD -> Microcontroller RX in my case (Pin 17)
 - HC-05 ENA -> Microcontroller 3V3
 
-###NB: ENA pin in the HC-05 needs to be set to high to enable AT command mode.
+### NB: ENA pin in the HC-05 needs to be set to high to enable AT command mode.
 
 Make sure to cross-connect the RX and TX pins between the Microcontroller board and the HC-05 module.
 
@@ -56,7 +56,7 @@ Here are some common AT commands that can be used with the HC-05 module:
 | AT+ORGL      | Send detail of settings done by the manufacturer | Parameters: device type, module mode, serial parameter, passkey, etc. |
 | AT+NAME      | check the name of the HC-S04                     | Parameters: device type, module mode, serial parameter, passkey, etc. |
 
-###Please refer to the [HC-05 datasheet](https://s3-sa-east-1.amazonaws.com/robocore-lojavirtual/709/HC-05_ATCommandSet.pdf) for more information on available AT commands and their specific usage.
+### Please refer to the [HC-05 datasheet](https://s3-sa-east-1.amazonaws.com/robocore-lojavirtual/709/HC-05_ATCommandSet.pdf) for more information on available AT commands and their specific usage.
 
 ### Example Code
 
