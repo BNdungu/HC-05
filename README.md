@@ -1,8 +1,6 @@
 # HC-05 AT Commands
 
-This repository provides a simple example of how I used AT commands to communicate with the HC-05 Bluetooth module using a Microcontroller board.
-
-### please note that the default baud rate for communication with the HC-05 module is set to 38400.
+This repository provides a simple example of how I used AT commands to communicate with the HC-05 Bluetooth module using my ESP32 board (but generally works with any board that does support UART).
 
 ## Getting Started
 
@@ -41,6 +39,8 @@ Make sure to cross-connect the RX and TX pins between the Microcontroller board 
 2. Open the Serial Monitor in the Arduino IDE.
 3. Set the baud rate of the Serial Monitor to 115200.
 4. Enter AT commands in the Serial Monitor to communicate with the HC-05 module.
+
+### Please note that the default baud rate for communication with the HC-05 module is set to 38400.
 
 The HC-05 expects commands to include a carriage return and newline characters (\r\n). You can add these automatically in the serial monitor by selecting “Both NL & CR” at the bottom of the window.
 
