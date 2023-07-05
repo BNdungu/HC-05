@@ -42,6 +42,8 @@ Make sure to cross-connect the RX and TX pins between the Microcontroller board 
 3. Set the baud rate of the Serial Monitor to 115200.
 4. Enter AT commands in the Serial Monitor to communicate with the HC-05 module.
 
+The HC-05 expects commands to include a carriage return and newline characters (\r\n). You can add these automatically in the serial monitor by selecting “Both NL & CR” at the bottom of the window.
+
 ## AT Commands
 
 Here are some common AT commands that can be used with the HC-05 module:
@@ -65,30 +67,31 @@ The following code snippet demonstrates the basic setup for sending and receivin
 ```cpp
 #include <SoftwareSerial.h>
 
-SoftwareSerial bt(16, 17);
-char c = ' ';
-boolean NL = true;
-
+SoftwareSerial bt(16, 17); // create an instance named bt(bluetooth) on rx pin 16 and tx pin 17
+char c = ' ';      //c variable reads from the uart buffer(rx pin)
+boolean newLine = true;
 void setup() {
-    bt.begin(38400);
-    Serial.begin(115200);
+    bt.begin(38400);  //please remember the baudrate is 38400 by default on the module
+    Serial.begin(115200); // serial communication between my Esp32 board and my PC works well at this baud
 }
 
-void loop() {
-    if (bt.available()) {
+void loop(){
+
+        // this if statement checks to see any available data from the the bt module and displays it on the serial monitor if present
+    if (bt.available())
+    {
         c = bt.read();
         Serial.write(c);
     }
-    if (Serial.available()) {
+         // this if statement checks to see any available data from the the serial monitor on user input and displays it after sending it to the hc-05's rx buffer.
+    if (Serial.available())
+    {
         c = Serial.read();
         bt.write(c);
-        if (NL) {
-            Serial.print(">");
-            NL = false;
-        }
+
+        if (newLine) { Serial.print(">");  newLine = false; }
         Serial.write(c);
-        if (c == 10)
-            NL = true;
+        if (c==10) newLine = true;
     }
-}
+ }
 ```
