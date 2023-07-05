@@ -16,7 +16,7 @@ To get started, follow these steps:
 
 ### Wiring
 
-Connect the HC-05 module to the Arduino board as follows:
+Connect the HC-05 module to the Microcontroller board as follows:
 
 - HC-05 VCC -> Microcontroller 3v3 or 5V
 - HC-05 GND -> Microcontroller GND pin
@@ -30,7 +30,7 @@ Make sure to cross-connect the RX and TX pins between the Microcontroller board 
 1. Download or clone this repository to your local machine.
 2. Open the included `.ino` file in the Arduino IDE.
 3. Ensure that the correct board and port are selected in the Arduino IDE.
-4. Compile and upload the code to your Arduino board.
+4. Compile and upload the code to your Microcontroller board.
 
 ### Using AT Commands
 
@@ -38,6 +38,19 @@ Make sure to cross-connect the RX and TX pins between the Microcontroller board 
 2. Open the Serial Monitor in the Arduino IDE.
 3. Set the baud rate of the Serial Monitor to 115200.
 4. Enter AT commands in the Serial Monitor to communicate with the HC-05 module.
+
+## AT Commands
+
+Here are some common AT commands that can be used with the HC-05 module:
+
+| Command      | Description                                      | Response                                                              |
+| ------------ | ------------------------------------------------ | --------------------------------------------------------------------- |
+| AT           | Checking communication                           | OK                                                                    |
+| AT+PSWD=XXXX | Set Password                                     | OK                                                                    |
+| AT+NAME=XXXX | Set Bluetooth Device Name                        | OK                                                                    |
+| AT+UART=XXXX | Change Baud rate                                 | OK                                                                    |
+| AT+VERSION?  | Respond version no. of Bluetooth module          | +Version: XX OK                                                       |
+| AT+ORGL      | Send detail of settings done by the manufacturer | Parameters: device type, module mode, serial parameter, passkey, etc. |
 
 ### Example Code
 
