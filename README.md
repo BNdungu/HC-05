@@ -2,7 +2,7 @@
 
 This repository provides a simple example of how I used AT commands to communicate with the HC-05 Bluetooth module using a Microcontroller board.
 
-## please note that the default baud rate for communication with the HC-05 module is set to 38400.
+### please note that the default baud rate for communication with the HC-05 module is set to 38400.
 
 ## Getting Started
 
