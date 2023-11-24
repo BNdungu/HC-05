@@ -6,6 +6,7 @@ boolean newLine = true;
 void setup() {
     bt.begin(38400);  
     Serial.begin(115200);
+    Serial.print("process initiated");
 }
 
 void loop()
